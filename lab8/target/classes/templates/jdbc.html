@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JDBC</title>
+</head>
+<body>
+  <h2>Doctors</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">firstName</th>
+        <th scope="col">secondName</th>
+        <th scope="col">patronymic</th>
+        <th scope="col">phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="Doctor :${Doctors}">
+        <td th:text="${Doctor.id}"></td>
+        <td th:text="${Doctor.firstName}"></td>
+        <td th:text="${Doctor.secondName}"></td>
+        <td th:text="${Doctor.patronymic}"></td>
+        <td th:text="${Doctor.phone}"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

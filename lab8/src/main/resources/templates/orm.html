@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ORM</title>
+</head>
+<body>
+<h2>Patient</h2>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">SecondName</th>
+        <th scope="col">Patronymic</th>
+        <th scope="col">Phone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="patient : ${patients}">
+        <td th:text="${patient.id}"></td>
+        <td th:text="${patient.firstName}"></td>
+        <td th:text="${patient.secondName}"></td>
+        <td th:text="${patient.patronymic}"></td>
+        <td th:text="${patient.phone}"></td>
+    </tr>
+    </tbody>
+</body>
+</html>
